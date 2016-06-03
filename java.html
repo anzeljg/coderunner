@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>CodeRunner (JOBE server) test</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- CodeMirror -->
+	<link href="css/codemirror.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">CodeRunner (JOBE)</a>
+				  <div id="menu1" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="cpp.html">C/C++</a></li>
+					<li class="active"><a href="java.html">Java</a></li>
+					<li><a href="pascal.html">Pascal</a></li>
+					<li><a href="php.html">PHP5</a></li>
+					<li><a href="index.html">Python3</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
+<h2>Java</h2>
+
+<div>
+<form>
+<p>
+<textarea id="code">
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+</textarea>
+</p>
+<p>
+<a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+</p>
+</form>
+</div>
+<pre id="output"></pre>
+<div id="error"></div>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+<!-- Right column start -->
+						<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, odio ut malesuada vulputate, urna elit dignissim nisi, eu tempus lectus quam ac erat. Nullam fringilla vulputate nulla ut tempus. Praesent mattis tortor augue, vel dignissim magna vulputate vitae. Nam placerat sollicitudin nisi eu rhoncus. Nullam fermentum nec elit a scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras sit amet nisl ligula. Proin id lobortis sapien. Cras dignissim tempor nibh, quis venenatis lorem blandit sed. Aenean ut ante efficitur, vulputate magna quis, vulputate urna. Sed maximus interdum lorem et posuere. Morbi quis turpis malesuada, posuere turpis non, molestie odio. Nulla ullamcorper ultrices sapien ac viverra. Aliquam sed ullamcorper nibh. Maecenas malesuada suscipit est sit amet lacinia.</p>
+
+						<p align="justify">Fusce non magna id diam consequat aliquet. Ut vehicula justo non ex laoreet aliquet. Duis scelerisque ex nec tellus aliquet, quis sagittis diam varius. Aenean turpis erat, fermentum id semper eu, ullamcorper vel purus. Vestibulum ornare sodales arcu a sodales. Nam nec arcu blandit, imperdiet sapien ac, egestas risus. Phasellus pretium tortor et arcu tempus, sit amet blandit augue molestie. Phasellus non eros lacinia, convallis mauris eget, tristique elit. Curabitur sapien metus, pellentesque nec lorem dignissim, maximus vestibulum elit.</p>
+
+						<p align="justify">Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis lacus, sagittis vel vulputate et, pellentesque a felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis justo quis metus porta, sit amet maximus massa convallis. Phasellus vulputate fringilla tortor sed commodo. Sed eget varius nunc, eu mattis enim. Vestibulum quis mauris ultrices, rutrum nulla vitae, malesuada metus. Pellentesque eu neque rutrum, tempor ex eu, faucibus nunc. Sed neque enim, rutrum et maximus nec, posuere et urna.</p>
+
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- Skulpt and CodeMirror -->
+	<script src="js/codemirror/codemirror.js"></script>
+	<script src="js/codemirror/clike.js"></script>
+
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "text/x-java",
+  theme: "mbo"
+});
+editor.setSize('100%', 270);
+</script>
+
+<script>
+function errormsg(err) {
+    var errHead = $('<h4>').html('Napaka');
+    var myerr = document.getElementById("error");
+    myerr.className = 'error alert alert-danger';
+    myerr.appendChild(errHead[0]);
+    var errText = myerr.appendChild(document.createElement('pre'));
+    errText.className = 'text-danger';
+    errText.innerHTML = err;
+};
+function runit() {
+    API_KEY = "67033pV7eUUvqo07OJDIV8UZ049aLEK1";
+    JOBE_SERVER = 'http://jobe2.cosc.canterbury.ac.nz';
+    resource = '/jobe/index.php/restapi/runs/';
+
+    var xhr = new XMLHttpRequest();
+	var prog = editor.getValue();
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+    var myerr = document.getElementById("error");
+    myerr.className = '';
+    myerr.innerHTML = '';
+
+    runspec = {
+        language_id: 'java',
+        sourcecode: prog,
+        sourcefilename: ''
+    };
+    data = JSON.stringify({'run_spec': runspec});
+    host = JOBE_SERVER + resource;
+
+    xhr.open("POST", host, true);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('X-API-KEY', this.API_KEY);
+
+    xhr.onload = (function () {
+        try {
+            var result = JSON.parse(xhr.responseText);
+        } catch (e) {
+            result = {};
+            result.outcome = -1;
+        }
+
+        if (result.outcome === 15) {
+            console.log('success');
+        } else {
+            console.log(result.outcome);
+        }
+        switch (result.outcome) {
+            case 15:
+                $(mypre).html(result.stdout.replace(/\n/g, "<br>"));
+                break;
+            case 11: // compiler error
+                $(mypre).html("Pri prevajanju kode je prišlo do napak. Glejte spodaj.");
+                errormsg(result.cmpinfo);
+                break;
+            case 12:  // run time error
+                $(mypre).html(result.stdout.replace(/\n/g, "<br>"));
+                if (result.stderr) {
+                    errormsg(result.stderr);
+                }
+                break;
+            case 13:  // time limit
+                $(mypre).html(result.stdout.replace(/\n/g, "<br>"));
+                errormsg("Rok izvajanja programa je bil prekoračen.");
+                break;
+            default:
+                if (result.stderr) {
+                    $(mypre).html(result.stderr.replace(/\n/g, "<br>"));
+                } else {
+                    errormsg("Napaka na strežniku: " + xhr.status + " " + xhr.statusText);
+                }
+        }
+
+        // todo: handle server busy and timeout errors too
+    }).bind(this);
+
+    $(mypre).html("Prevajanje in izvajanje kode...");
+
+    xhr.onerror = function () {
+        errormsg("Napaka pri komunikaciji s strežnikom.");
+    };
+
+    xhr.send(data);
+}
+function clearit() {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+    var myerr = document.getElementById("error");
+    myerr.className = '';
+    myerr.innerHTML = '';
+}
+</script>
+
+</body>
+
+</html>
